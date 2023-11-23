@@ -1,12 +1,13 @@
 import React from "react";
 
-const Movies = () => {
+const filters = () => {
   return (
     <>
-      <h1>Main/Movies Page</h1>
+      {" "}
+      <h1>Filters</h1>
       <p>Page under construction</p>
     </>
   );
 };
 
-export default Movies;
+export default filters;

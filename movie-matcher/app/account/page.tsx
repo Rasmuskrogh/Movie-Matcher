@@ -1,12 +1,12 @@
 import React from "react";
 
-const Movies = () => {
+const accountPage = () => {
   return (
     <>
-      <h1>Main/Movies Page</h1>
+      <h1>Account Page</h1>
       <p>Page under construction</p>
     </>
   );
 };
 
-export default Movies;
+export default accountPage;
