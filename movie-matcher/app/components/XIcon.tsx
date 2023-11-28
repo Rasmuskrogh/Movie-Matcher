@@ -6,7 +6,7 @@ const XIcon = () => {
     <>
       <IoClose
         size={50}
-        className="bg-black rounded-full z-2 fill-white ml-[20%] mb-4"
+        className="bg-black rounded-full z-2 fill-white ml-[16%] mb-4 absolute z-10"
       />
     </>
   );

@@ -1,14 +1,25 @@
 import React from "react";
 import HeartIcon from "./HeartIcon";
 import XIcon from "./XIcon";
+import Image from "next/image";
 
 const Card = () => {
   return (
     <>
-      <div className="m-1 border-solid border-orange-600 border-2 w-98% h-96 rounded relative">
-        <div className="flex flex-row justify-between items-end h-full">
+      <div
+        className="m-1 w-98% h-[550px] rounded relative"
+        style={{ backgroundImage: `url('/notebookPoster.pgn')` }}
+      >
+        component under construction
+        <div className="flex flex-row items-end h-full pb-6">
           <XIcon />
           <HeartIcon />
+          <Image
+            src="/notebookPoster.jpg"
+            alt="poster image"
+            fill
+            className="rounded"
+          />
         </div>
       </div>
     </>

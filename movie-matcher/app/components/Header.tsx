@@ -5,7 +5,7 @@ import { HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
 
 const Header = () => {
   return (
-    <nav className="flex justify-between pt-6 pb-2 border-solid border-2 border-black">
+    <nav className="flex justify-between pt-6 pb-2">
       <div className="flex ml-1">
         <PiPopcorn size={24} />
         <h1>
