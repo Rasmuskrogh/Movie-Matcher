@@ -10,7 +10,6 @@ const Card = () => {
         className="m-1 w-98% h-[550px] rounded relative"
         style={{ backgroundImage: `url('/notebookPoster.pgn')` }}
       >
-        component under construction
         <div className="flex flex-row items-end h-full pb-6">
           <XIcon />
           <HeartIcon />
