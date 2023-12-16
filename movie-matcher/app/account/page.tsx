@@ -15,7 +15,16 @@ const accountPage = () => {
       </div>
       <form action="" className="flex flex-col">
         <div className="flex justify-between mr-4">
-          <label>Name:</label>
+          <label>First name:</label>
+          <input
+            placeholder="John Doe"
+            type="text"
+            name="name"
+            className="border-solid border-slate-800 border-2"
+          />
+        </div>
+        <div className="flex justify-between mr-4">
+          <label>Last name:</label>
           <input
             placeholder="John Doe"
             type="text"

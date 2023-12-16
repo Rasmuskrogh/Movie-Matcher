@@ -78,7 +78,7 @@ const filters = () => {
             <h3 className="text-lg pb-1">Excluded:</h3>
             <div>
               <input type="checkbox" checked className="mr-2" />
-              <label>All</label>
+              <label>None</label>
             </div>
             <div>
               <input type="checkbox" className="mr-2" />
@@ -137,6 +137,12 @@ const filters = () => {
               <label>Western</label>
             </div>
           </form>
+        </div>
+        <div className="pt-5">
+          <input type="checkbox" className="mr-2" />
+          <label className="text-red-500">
+            Include previously discarded movies
+          </label>
         </div>
       </div>
     </>
