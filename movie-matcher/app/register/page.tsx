@@ -1,18 +1,7 @@
 import React from "react";
+import { createAccount } from "../actions";
 
 const Register = () => {
-  async function createAccount(formData: FormData) {
-    "use server";
-    const rawFormData = {
-      firstName: formData.get("firstName"),
-      lastName: formData.get("lastName"),
-      username: formData.get("username"),
-      email: formData.get("email"),
-      password: formData.get("password"),
-    };
-    console.log(rawFormData);
-  }
-
   return (
     <div className="w-100% h-[550px] bg-slate-800 text-white p-2">
       <h1>Register form</h1>
@@ -59,7 +48,12 @@ const Register = () => {
         </div>
         <div>
           <label htmlFor="">Repeat password: </label>
-          <input type="password" className="text-black" />
+          <input
+            id="confirmPassword"
+            name="confirmPassword"
+            type="password"
+            className="text-black"
+          />
         </div>
         <div>
           <input type="submit" value="Register" />
