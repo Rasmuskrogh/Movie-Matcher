@@ -4,9 +4,6 @@ import { MdEdit } from "react-icons/md";
 const accountPage = () => {
   return (
     <div className="bg-slate-800 text-white p-2 w-100% h-[550px]">
-      {/* <h1>Contacts Page</h1>
-    <p className="text-red-600">Page under construction</p>
-     */}
       <div className="flex items-baseline">
         <h2 className="mr-3 text-xl mb-2">Account information</h2>
         <span className="flex items-baseline">
