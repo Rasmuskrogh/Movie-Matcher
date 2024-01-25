@@ -46,7 +46,7 @@ const Register = () => {
             className="text-black"
           />
         </div>
-        <div>
+        {/*  <div>
           <label htmlFor="">Repeat password: </label>
           <input
             id="confirmPassword"
@@ -54,7 +54,7 @@ const Register = () => {
             type="password"
             className="text-black"
           />
-        </div>
+        </div> */}
         <div>
           <input type="submit" value="Register" />
         </div>
