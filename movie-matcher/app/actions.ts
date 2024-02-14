@@ -60,5 +60,14 @@ export async function loginAccount(formData: FormData) {
     console.log("Wrong password");
     return;
   }
+
   console.log("Password is correctus!");
+
+  revalidatePath("/");
+  redirect("/");
 }
+
+export async function addToLiked() {
+  
+}
+export async function addToDisliked() {}
