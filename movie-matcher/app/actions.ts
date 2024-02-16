@@ -67,7 +67,5 @@ export async function loginAccount(formData: FormData) {
   redirect("/");
 }
 
-export async function addToLiked() {
-  
-}
+export async function addToLiked() {}
 export async function addToDisliked() {}
