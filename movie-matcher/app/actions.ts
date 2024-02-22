@@ -67,5 +67,20 @@ export async function loginAccount(formData: FormData) {
   redirect("/");
 }
 
-export async function addToLiked() {}
-export async function addToDisliked() {}
+// export const testPoster = sql`
+// SELECT poster FROM hardcoded_movies
+// `;
+
+//export const theImport = testPoster.rows[0].poster
+
+export async function posters(i: number) {
+  const allPosters = await sql`
+  SELECT poster FROM hardcoded_movies`;
+  console.log(`${allPosters.rows[i].poster}`);
+  return allPosters.rows[i].poster;
+  //console.log("all movies: ", allMovies, "typeof movies: ", typeof allMovies);
+  //allMovies.rows[i].poster;
+}
+
+// export async function addToLiked() {}
+// export async function addToDisliked() {}

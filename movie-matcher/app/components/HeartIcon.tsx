@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { FaHeart } from "react-icons/fa";
+import { posters } from "../actions";
 
 const HeartIcon = () => {
   const buttonClicked = () => {
