@@ -34,8 +34,6 @@ export async function createAccount(formData: FormData) {
       //confirmPassword: formData.get("confirmPassword"),
     });
 
-  //const dbPassword = password;
-
   const hashedPassword = await bcrypt.hash(password, saltRounds);
 
   await sql`
@@ -61,25 +59,22 @@ export async function loginAccount(formData: FormData) {
     return;
   }
 
-  console.log("Password is correctus!");
+  console.log("Password is correct!");
 
   revalidatePath("/");
   redirect("/");
 }
 
-// export const testPoster = sql`
-// SELECT poster FROM hardcoded_movies
-// `;
-
-//export const theImport = testPoster.rows[0].poster
-
 export async function posters(i: number) {
   const allPosters = await sql`
   SELECT poster FROM hardcoded_movies`;
-  console.log(`${allPosters.rows[i].poster}`);
   return allPosters.rows[i].poster;
-  //console.log("all movies: ", allMovies, "typeof movies: ", typeof allMovies);
-  //allMovies.rows[i].poster;
+}
+
+export async function allPosters() {
+  const allPosters = await sql`
+  SELECT COUNT(*) FROM hardcoded_movies`;
+  return allPosters.rows[0].count;
 }
 
 // export async function addToLiked() {}

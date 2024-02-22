@@ -2,11 +2,13 @@ import React, { useEffect } from "react";
 import HeartIcon from "./HeartIcon";
 import XIcon from "./XIcon";
 import Image from "next/image";
-import { posters } from "../actions";
+import { posters, allPosters } from "../actions";
 const axios = require("axios");
 
 const Card = async () => {
-  const poster = await posters(2);
+  const movieCount = await allPosters();
+  const randomIndex = Math.floor(Math.random() * (movieCount - 1));
+  const poster = await posters(randomIndex);
 
   return (
     <>
