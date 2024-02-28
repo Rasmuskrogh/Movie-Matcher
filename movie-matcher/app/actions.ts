@@ -77,5 +77,71 @@ export async function allPosters() {
   return allPosters.rows[0].count;
 }
 
+export async function titles(i: number) {
+  const allTitles = await sql`
+  SELECT title FROM hardcoded_movies`;
+  return allTitles.rows[i].title;
+}
+
+export async function years(i: number) {
+  const allYears = await sql`
+  SELECT year FROM hardcoded_movies`;
+  return allYears.rows[i].year;
+}
+
+export async function runtimes(i: number) {
+  const allRuntimes = await sql`
+  SELECT runtime FROM hardcoded_movies`;
+  return allRuntimes.rows[i].runtime;
+}
+
+export async function genres(i: number) {
+  const allGenres = await sql`
+  SELECT Genre FROM hardcoded_movies`;
+  return allGenres.rows[i].genre;
+}
+
+export async function plots(i: number) {
+  const allPlots = await sql`
+  SELECT plot FROM hardcoded_movies`;
+  return allPlots.rows[i].plot;
+}
+
+export async function directors(i: number) {
+  const allDirectors = await sql`
+  SELECT director FROM hardcoded_movies`;
+  return allDirectors.rows[i].director;
+}
+
+export async function writers(i: number) {
+  const allWriters = await sql`
+  SELECT writer FROM hardcoded_movies`;
+  return allWriters.rows[i].writer;
+}
+
+export async function actors(i: number) {
+  const allActors = await sql`
+  SELECT actors FROM hardcoded_movies`;
+  return allActors.rows[i].actors;
+}
+
+export async function imdbRatings(i: number) {
+  const allImdbRatings = await sql`
+  SELECT imdbrating FROM hardcoded_movies`;
+  return allImdbRatings.rows[i].imdbrating;
+}
+
+export async function rottenTomatoesRatings(i: number) {
+  const allRottenTomatoesRatings = await sql`
+  SELECT rottentomatoesrating FROM hardcoded_movies`;
+  return allRottenTomatoesRatings.rows[i].rottentomatoesrating;
+}
+
+export async function metaCriticRatings(i: number) {
+  const allMetaCriticRatings = await sql`
+  SELECT metascriticrating FROM hardcoded_movies`;
+  return allMetaCriticRatings.rows[i].metascriticrating;
+}
+
 // export async function addToLiked() {}
 // export async function addToDisliked() {}
