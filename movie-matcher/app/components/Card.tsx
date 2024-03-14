@@ -17,6 +17,7 @@ import {
   rottenTomatoesRatings,
   metaCriticRatings,
 } from "../actions";
+import { write } from "fs";
 const axios = require("axios");
 
 const Card = async () => {
@@ -64,8 +65,34 @@ const Card = async () => {
       <div className="m-1 w-98% h-[550px] rounded relative">
         {
           <div className="flex flex-row items-end h-full pb-6">
-            <XIcon />
-            <HeartIcon />
+            <XIcon
+              poster={poster}
+              title={title}
+              year={year}
+              runtime={runtime}
+              genre={genre}
+              plot={plot}
+              director={director}
+              movieActors={movieActors}
+              writer={writer}
+              imdbRating={imdbRating}
+              rottenTomatoesRating={rottenTomatoesRating}
+              metaCriticRating={metaCriticRating}
+            />
+            <HeartIcon
+              poster={poster}
+              title={title}
+              year={year}
+              runtime={runtime}
+              genre={genre}
+              plot={plot}
+              director={director}
+              movieActors={movieActors}
+              writer={writer}
+              imdbRating={imdbRating}
+              rottenTomatoesRating={rottenTomatoesRating}
+              metaCriticRating={metaCriticRating}
+            />
             <Image src={poster} alt="poster image" fill className="rounded" />
           </div>
         }

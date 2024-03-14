@@ -1,12 +1,38 @@
 "use client";
 import React from "react";
 import { FaHeart } from "react-icons/fa";
-import { allPosters } from "../actions";
 
-const HeartIcon = () => {
+interface Props {
+  poster: string;
+  title: string;
+  year: number;
+  runtime: string;
+  genre: string;
+  plot: string;
+  director: string;
+  movieActors: string;
+  writer: string;
+  imdbRating: string;
+  rottenTomatoesRating: number;
+  metaCriticRating: number;
+}
+
+const HeartIcon = ({
+  poster,
+  title,
+  year,
+  runtime,
+  genre,
+  plot,
+  director,
+  movieActors,
+  writer,
+  imdbRating,
+  rottenTomatoesRating,
+  metaCriticRating,
+}: Props) => {
   const buttonClicked = () => {
-    console.log("<3 clicked");
-    console.log(allPosters());
+    console.log("<3 clicked", title);
   };
 
   return (

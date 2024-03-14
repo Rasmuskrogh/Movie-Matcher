@@ -2,9 +2,37 @@
 import React from "react";
 import { IoClose } from "react-icons/io5";
 
-const XIcon = () => {
+interface Props {
+  poster: string;
+  title: string;
+  year: number;
+  runtime: string;
+  genre: string;
+  plot: string;
+  director: string;
+  movieActors: string;
+  writer: string;
+  imdbRating: string;
+  rottenTomatoesRating: number;
+  metaCriticRating: number;
+}
+
+const XIcon = ({
+  poster,
+  title,
+  year,
+  runtime,
+  genre,
+  plot,
+  director,
+  movieActors,
+  writer,
+  imdbRating,
+  rottenTomatoesRating,
+  metaCriticRating,
+}: Props) => {
   const buttonClicked = () => {
-    console.log("X clicked");
+    console.log("X clicked", title);
   };
 
   return (
